@@ -322,7 +322,7 @@ var projects = {
 		"title": "Curve Applications",
 		"dates": "2006-2009",
 		"description": "Applications developed to support the Curve model of portfolio management.",
-		"images": ["images/ctt4.jpg","images/ctt1.jpg","images/r2000.jpg"]
+		"images": ["images/ctt4.jpg","images/ctt1.jpg","images/deltay.jpg"]
 	  },
 	  {
 		"title": "Conversion of OSPAS planning and offtake systems from character-based flat files to windows-based SQL DB.",
