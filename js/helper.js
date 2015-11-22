@@ -31,6 +31,7 @@ var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></
 
 var HTMLskillsLongStart = '<div class="skillLong-entry"></div>';
 var HTMLskillLong = '<div class="skillsLong-text">- %data%</div>';
+var HTMLskillLongGroup = '<a href="#">%data%</a>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';

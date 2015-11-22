@@ -74,38 +74,59 @@ var bio = {
 }
 
 var skillsLong = {
-	"skill" : [	"Quantitative portfolio manager and analyst",
-				"Advanced Finance degree, MBA International Finance",
-				"CFA Charter Holder (2000)",
+	"skillGroup": [
+		{
+		 "name": "Investment Finance",
+		 "skill": [
+		 			"Quantitative portfolio manager and analyst",
+					"Advanced Finance degree, MBA International Finance",
+					"CFA Charter Holder (2000)",
+					"Buy-side investment experience on quantamental teams",
+					"Collaborates well with fundamental PMs and analysts",
+					"Marketing and client presentaions"]
+		},
+		{
+		"name": "Data Scientist",
+		"skill": [
+				"Financial data scientist",
 				"Quantitative equity research, backtesting and modeling",
 				"Portfolio optimization, attribution and risk analysis",
 				"Strong analytical and problem solving skills, detail oriented",
-				"Buy-side investment experience on quantamental teams",
-				"Collaborates well with fundamental PMs and analysts",
-				"Marketing and client presentaions",
-				"Financial data scientist",
 				"Experience with North American and international data sets",
 				"Automate data validation and processing",
-				"Finance data tools: Clarifi, Compustat, Bloomberg, Northfield",
+				"Finance data tools: Clarifi, Compustat, Bloomberg, Northfield"]
+		},
+		{
+		"name": "Computer Scientist",
+		"skill": [
 				"Advanced Math & Computer Science (M.S.) degree",
 				"Programming skills and application development",
 				"Database building, administration and management",
 				"Project management",
 				"Programming tools: VB.net, SQL Server, Matlab, R",
-				"Web tools: HTML, CSS, Javascript, Ruby on Rails",
+				"Web tools: HTML, CSS, Javascript, Ruby on Rails"]
+		},
+		{
+		"name": "Communication",
+		"skill": [
 				"Good written and oral communication skills",
-				"Works well on team and individually"
-			  ],
+				"Works well on team and individually"]
+		}],
 		"display" :
 			function () {
 				// header
 				$("#skillsLong").append(HTMLskillsLongStart);
 				// skills array
-				if (skillsLong.skill.length > 0) {
+				if (skillsLong.skillGroup.length > 0) {
   					// skills loop
-  					for (var skill in skillsLong.skill) {
-						var formattedSkillLong = HTMLskillLong.replace("%data%", skillsLong.skill[skill]);
-  						$(".skillLong-entry:last").append(formattedSkillLong);
+  					for (var skillGroup in skillsLong.skillGroup) {
+  						// print skill group name
+  						var formattedSkillLongGroup = HTMLskillLongGroup.replace("%data%", skillsLong.skillGroup[skillGroup].name);
+  						$(".skillLong-entry:last").append(formattedSkillLongGroup);
+  						for (var skill in skillsLong.skillGroup[skillGroup].skill) {
+							var formattedSkillLong = HTMLskillLong.replace("%data%", skillsLong.skillGroup[skillGroup].skill[skill]);
+  							$(".skillLong-entry:last").append(formattedSkillLong);
+  						}
   					}
 				}
 			}
