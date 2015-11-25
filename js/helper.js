@@ -30,7 +30,7 @@ var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLskillsLongStart = '<div class="skillLong-entry"></div>';
-var HTMLskillLong = '<div class="skillsLong-text">- %data%</div>';
+var HTMLskillLong = '<l1 class="skillsLong-text">- %data%</li>';
 var HTMLskillLongGroup = '<a href="#">%data%</a>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
@@ -62,7 +62,6 @@ var HTMLonlineURL = '<div class="oclass-text"><br><a href="#">%data%</a>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
-
 
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run.\

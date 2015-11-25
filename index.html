@@ -24,12 +24,15 @@
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
+    <!-- <h2>Skills</h2>
+      <ul id="skillsList" class="flex-box-skills"></ul> -->
     <div id="header" class="center-content clear-fix">
       <ul id="topContacts" class="flex-box"></ul>
     </div>
     <div style="clear: both;"></div>
     <div id="skillsLong">
       <h2>Skills</h2>
+      <ul id="skillsList" class="flex-box-skills"></ul>
     </div>
     <div id="workExperience" class="gray">
       <h2>Work Experience</h2>
@@ -83,7 +86,7 @@
     if(document.getElementsByTagName('h1').length === 0) {
       document.getElementById('header').style.display = 'none';
     }
-    if(document.getElementsByClassName('skillLong-entry').length === 0) {
+    if(document.getElementByID('skillsLong') === null) {
       document.getElementById('skillsLong').style.display = 'none';
     }
     if(document.getElementsByClassName('work-entry').length === 0) {

@@ -81,12 +81,10 @@ var skillsLong = {
 		 			"Quantitative portfolio manager and analyst",
 					"Advanced Finance degree, MBA International Finance",
 					"CFA Charter Holder (2000)",
-					"Buy-side investment experience on quantamental teams",
-					"Collaborates well with fundamental PMs and analysts",
-					"Marketing and client presentaions"]
+					"Buy-side investment experience on quantamental teams"]
 		},
 		{
-		"name": "Data Scientist",
+		"name": "Data Science",
 		"skill": [
 				"Financial data scientist",
 				"Quantitative equity research, backtesting and modeling",
@@ -97,7 +95,7 @@ var skillsLong = {
 				"Finance data tools: Clarifi, Compustat, Bloomberg, Northfield"]
 		},
 		{
-		"name": "Computer Scientist",
+		"name": "Computer Science",
 		"skill": [
 				"Advanced Math & Computer Science (M.S.) degree",
 				"Programming skills and application development",
@@ -110,22 +108,26 @@ var skillsLong = {
 		"name": "Communication",
 		"skill": [
 				"Good written and oral communication skills",
-				"Works well on team and individually"]
+				"Works well on team and individually",
+				"Marketing and client presentaions",
+				"Collaborates well with fundamental PMs and analysts"]
 		}],
 		"display" :
 			function () {
 				// header
-				$("#skillsLong").append(HTMLskillsLongStart);
+				//$("#skillsLong").append(HTMLskillsLongStart);
 				// skills array
 				if (skillsLong.skillGroup.length > 0) {
   					// skills loop
   					for (var skillGroup in skillsLong.skillGroup) {
   						// print skill group name
   						var formattedSkillLongGroup = HTMLskillLongGroup.replace("%data%", skillsLong.skillGroup[skillGroup].name);
-  						$(".skillLong-entry:last").append(formattedSkillLongGroup);
+  						//$(".skillLong-entry:last").append(formattedSkillLongGroup);
+  						$("#skillsList").append(formattedSkillLongGroup);
   						for (var skill in skillsLong.skillGroup[skillGroup].skill) {
 							var formattedSkillLong = HTMLskillLong.replace("%data%", skillsLong.skillGroup[skillGroup].skill[skill]);
-  							$(".skillLong-entry:last").append(formattedSkillLong);
+  							//$(".skillLong-entry:last").append(formattedSkillLong);
+  							$("#skillsList").append(formattedSkillLong);
   						}
   					}
 				}
